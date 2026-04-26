@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 function useInView(threshold = 0.12) {
@@ -71,19 +72,7 @@ const XIcon = () => (
 
 /* ── Logo ── */
 const LogoIcon = ({ size = 40 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
-    <defs>
-      <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#d4b96a"/>
-        <stop offset="50%" stopColor="#5aae5d"/>
-        <stop offset="100%" stopColor="#1d5e20"/>
-      </linearGradient>
-    </defs>
-    <path d="M50 8 C28 8 15 28 15 48 C15 62 22 72 35 80 C42 84 50 85 50 85 C50 85 58 84 65 80 C78 72 85 62 85 48 C85 28 72 8 50 8Z" fill="url(#lg1)" opacity="0.15"/>
-    <path d="M30 55 Q25 45 35 35 Q45 25 55 30 Q70 20 72 38 Q78 30 70 22 Q55 10 40 18 Q22 28 22 50 Q22 65 35 73 Q48 82 62 75 Q72 68 72 55 Q65 62 55 62 Q42 60 30 55Z" fill="url(#lg1)"/>
-    <path d="M35 58 Q42 65 55 62 Q65 60 70 52 Q60 58 48 55 Q38 52 35 42 Q30 48 35 58Z" fill="url(#lg1)" opacity="0.7"/>
-    <path d="M25 52 Q30 62 42 66 Q38 70 30 65 Q22 60 22 50 Z" fill="url(#lg1)" opacity="0.5"/>
-  </svg>
+  <Image src="/logo.png" alt="Ecosystra Logo" width={size} height={size} style={{ objectFit: "contain" }} />
 );
 
 /* ── Data ── */
